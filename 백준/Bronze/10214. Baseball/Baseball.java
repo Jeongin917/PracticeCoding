@@ -1,0 +1,30 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int T = sc.nextInt();
+
+        for (int i = 1; i <= T; i++) {
+            int sumY = 0;
+            int sumK = 0;
+
+            for (int j = 1; j <= 9; j++) {
+                int Y = sc.nextInt();
+                int K = sc.nextInt();
+
+                sumY += Y;
+                sumK += K;
+            }
+
+            if (sumY > sumK){
+                System.out.println("Yonsei");
+            } else if (sumY < sumK){
+                System.out.println("Korea");
+            } else System.out.println("Draw");
+        }
+
+        sc.close();
+    }
+}
